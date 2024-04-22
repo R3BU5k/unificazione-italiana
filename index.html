@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>Eventi chiave di Napoleone</title>
+    <link rel="icon" type="image/png" href="logo.jpg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="colonna" id="eventContent"></div>
+      <div class="colonna" id="eventContent2"></div>
+      <div class="colonna" id="eventContent3"></div>
+      <!-- <div class="colonna" id="eventContent4" ></div>  -->
+    </div>
+
+    <select id="eventSelect">
+        <option value="#1">Costituzioni abrogate</option>
+        <option value="#2">Camillo Benso</option>
+        <option value="#3">Società Nazionale Italiana</option>
+        <option value="#4">L'occasione della Crimea</option>
+        <option value="#5">Gli accordi di Plombières</option>
+        <option value="#6">L'Austria nella trappola</option>
+        <option value="#7">L'iniziativa di Garibaldi</option>
+        <option value="#8">L'incontro di Teano</option>
+    </select>
+
+    <b>Developed by <a href="https://github.com/R3BU5k">R3BU5</a></b>
+    <script src="scripts.js"></script>
+  </body>
+  <script>
+    const eventsData = [
+      {
+        id: "1",
+        title: "Le Costituzioni abrogate (e non)",
+        image: "carloalberto.jpg",
+        details:
+          "Il fallimento dei moti del 1848 fece abrogare le Costituzioni concesse, tranne lo Statuto Albertino. Pio IX a Roma riprese la politica conservatrice, mentre Ferdinando II attuò una dura repressione nel Regno delle Due Sicilie. Nel Lombardo-Veneto fu inviato il generale austriaco Radetzki in occupazione militare. <br> Nel Regno di Sardegna, Vittorio Emanuele II non revocò lo Statuto Albertino. Affidò il governo a Massimo d'Azeglio e il ministro della Giustizia con le leggi Siccardi, pose fine ad alcuni privilegi della Chiesa: diritto del clero di essere giudicato dal foro ecclesiastico; diritto di asilo per chi si trovava in luoghi sacri.",
+      },
+      {
+        id: "2",
+        title: "Camillo Benso, Conte di Cavour",
+        image: "benson.jpg",
+        details:
+          "Appartenente all'aristocrazia piemontese. Tornato da viaggi in Inghilterra, Francia, Germania e Svizzera, introdusse nuove tecniche di coltivazione. Nel 1848 venne eletto deputato, nel 1850 ministro dell'agricoltura e nel 1852 presidente del Consiglio. <br> Grazie ad un accordo con Urbano Rattazzi, leader dell'opposizione, portando alla nascita di una politica di centro. <br> Il re in contrapposizione con lo Statuto Albertino, su volontà del Parlamento affidò il governo a Cavour, sostituì d'Azeglio e prese come modello lo Stato di Gran Bretagna. Liberista in economia, favorì l'agricoltura e fece crescere l'economia abbassando i dazi doganali, ampliando il porto di Genova e la rete dei trasporti.",
+      },
+      {
+        id: "3",
+        title: "La Società Nazionale Italiana",
+        image: "pisacane.jpg",
+        details:
+          "In 10 anni le riforme di Cavour trasformarono il Piemonte nella regione più evoluta d'Italia. Nel 1857 Cavour ispirò la Società Nazionale Italiana. <br> Si ricorda l'insurrezione attuata da Carlo Pisacane nel giugno 1857 si imbarcò a Genova verso l'isola di Ponza, dove liberò circa 300 detenuti. Giunse a Sapri, dove i contadini repressero la rivolta aiutati dell'esercito borbonico. Dopo questo fallimento Pisacane si suicidò.",
+      },
+      {
+        id: "4",
+        title: "L'occasione della Crimea",
+        image: "crimea.jpg",
+        details:
+          "Il nemico del Piemonte era l'Austria. Nel 1853 scoppiò la guerra in Crimea, perchè la Russia voleva espandersi a danno della Turchia, in difesa scesero Francia e Inghilterra. Nel 1854, Cavour decise di intervenire con 15.000 uomini. <br> Nel 1855 i Russi si arresero e il Piemonte sedette \"al tavolo dei vincitori\". Nel Congresso tenutosi a Parigi Cavour fece diventare la questione dell'unità nazionale un problema europeo.",
+      },
+      {
+        id: "5",
+        title: "Gli accordi di Plombières",
+        image: "accordo.jpg",
+        details:
+          "Tra Cavour e Napoleone III si stabilì una certa intesa. Nel 1858 si tenne un incontro a Plombierès tra Napoleone III e Cavour arrivando ai seguenti accordi: <br> -la Francia avrebbe aiutato il Regno di Sardegna se l'Austria le avesse dichiarato guerra, ottenendo Nizza e Savoia; <br> -l'Italia avrebbe formato una confederazione con: Regno dell'Alta Italia, Regno dell'Italia Centrale e Regno delle Due Sicilie. <br> -Il papa avrebbe ottenuto la presidenza della confederazione. <br> L'obiettivo principale era allontanare gli austriaci dall'Italia.",
+      },
+      {
+        id: "6",
+        title: "L'Austria cade nella trappola",
+        image: "villafranca.jpg",
+        details:
+          "Cavour schierò l'esercito ai confini della Lombardia, a cui si aggiunsero volontari di Garibaldi. L'Austria inviò un ultimatum il 23/4 e il 29/4/1859 inziò la seconda guerra d'indipendenza. <br> I franco-piemontesi ottennero numerose vittorie e furono proclamati dei governi provvisori. <br> Napoleone III aveva paura di perdere il controllo della situazione: la guerra non era finita, la Prussia e Russia minacciavano di entrare nel conflitto e l'annessione della Toscana e dell'Emilia non era prevista negli accordi; per questo Napoleone III l'11/7/1859 firmò l'armistizio a Villafranca. <br> Il Veneto rimaneva all'Austria, Cavour annesse Toscana ed Emilia, Emanuele II cedette Nizza e Savoia alla Francia. L'11 e 12/3/1860 furono approvate le annessioni con un plebiscito. La cessione di Nizza provocò comunque proteste.",
+      },
+      {
+        id: "7",
+        title: "L'iniziativa di Garibaldi",
+        image: "napoli.jpg",
+        details:
+          "Francesco Crispi e Rosolino Pilo suggerirono a Garibaldi di guidare la \"spedizione dei Mille\". Mentre Cavour era contrario, Vittorio Emanuele II appoggiava l'iniziativa. Tra il 5 e 6/5/1860 Garibaldi partì da Quarto (Genova), fece uno scalo a Talamone e raggiunse Marsala poco dopo. Vinse gli scontri a Calatafimi, Palermo e Milazzo. <br> L'appoggio dei Siciliani proveniva dai contadini e dalla classe dirigente, che si dimostrò utile per il successo della spedizione. Il 20/8/1860 i Mille sbarcarono in Calabria e il 7/9 entrarono a Napoli. Franceschiello si rifugiò nella fortezza di Gaeta. Con la battaglia di Castelfidardo vennero sottratte allo Stato Pontificio l'Umbria e le Marche. Si tennero dei plebisciti a suffraggio universale per l'approvazione delle nuove annessioni.",
+      },
+      {
+        id: "8",
+        title: "L'incontro di Teano",
+        image: "teano.jpg",
+        details:
+          "Il 26/10/1860 avvenne l'incontro tra Vittorio Emanuele II e Garibaldi a Teano, presso Caserta. Garibaldi avrebbe voluto che l'Italia diventasse una Repubblica anzichè una Monarchia, ma non potè far altro che consegnare i territori conquistati al sovrano. Il 17/3/1861 si riunì a Torino il primo Parlamento nazionale e Vittorio Emanuele II fu dichiarato re d'Italia, un nuovo stato Europeo. Il 6/6/1861 moriva Cavour l'artefice diplomatico del miracolo dell'unità d'Italia.",
+      },
+      // Aggiungi altri dati degli eventi...
+    ];
+
+    const select = document.getElementById("eventSelect");
+    const contentContainers = document.querySelectorAll(".colonna");
+
+    // Funzione per generare il contenuto della sezione in base all'evento selezionato
+    function generateEventContent(eventId, index) {
+      const event = eventsData.find((item) => item.id === eventId);
+      if (event && index >= 0 && index < contentContainers.length) {
+        // Crea il markup HTML per l'evento corrente
+        const eventHTML = `
+                <section id="${event.id}">
+                    <div>
+                        <img class="fullscreen-btn" src="${event.image}">
+                    </div>
+                    <details>
+                        <summary class="sticky">${event.title}</summary>
+                        <p>${event.details}</p>
+                    </details>
+                </section>
+        `;
+        // Aggiungi il markup HTML al contenuto del contenitore appropriato
+        contentContainers[index].innerHTML += eventHTML;
+      }
+    }
+
+    // Gestione dell'evento onchange del select
+    select.addEventListener("change", function () {
+      const selectedIndex = this.selectedIndex;
+      const selectedOption = this.options[selectedIndex];
+      const eventId = selectedOption.value.slice(1);
+
+      // Rimuovi tutti gli eventi attualmente visualizzati
+      contentContainers.forEach((container) => (container.innerHTML = ""));
+
+      // Genera il contenuto per l'evento selezionato
+      generateEventContent(eventId, selectedIndex % contentContainers.length);
+      //loadContent();
+    });
+
+    function loadContent() {
+      // Verifica la larghezza del dispositivo e genera il contenuto iniziale di conseguenza
+      if (window.innerWidth > 1000) {
+        // Genera il contenuto iniziale basato sulla selezione predefinita
+        for (let i = 0; i < select.options.length; i++) {
+          generateEventContent(
+            select.options[i].value.slice(1),
+            i % contentContainers.length
+          );
+        }
+      } else {
+        // Genera il contenuto iniziale basato sulla selezione predefinita con un indice fisso
+        for (let i = 0; i < select.options.length; i++) {
+          generateEventContent(select.options[i].value.slice(1), 1);
+        }
+      }
+    }
+    loadContent();
+  </script>
+</html>

@@ -1,0 +1,204 @@
+/* Hide scrollbar for Chrome, Safari and Opera 
+<iframe allow="fullscreen" src="https://www.youtube.com/embed/BOlI60L7d00?si=oDf-jFibDMLB7u14">
+</iframe>*/
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    border-radius: 10px;
+}
+
+body {
+    background-image: url("bandiera.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.container>.colonna {
+    width: 30%;
+    /*Larghezza scheda*/
+}
+
+.colonna {
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /*border: 2px solid red;*/
+}
+
+.colonna>section {
+    background-color: #f1f1f172;
+    width: auto;
+    height: fit-content;
+    margin-bottom: 20px;
+    text-align: center;
+    /*line-height: 75px;*/
+    font-size: 30px;
+}
+
+details>p {
+    padding: 5%;
+}
+
+summary {
+    color: #f1f1f1;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+img,
+iframe {
+    object-fit: contain;
+    width: 90%;
+    /*height: 150px;*/
+    /*aspect-ratio: 16/9;*/
+    margin-top: 10px;
+    background-color: black;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+}
+
+p {
+    background-color: #f1f1f172;
+    font-size: 1.8rem;
+}
+
+select {
+    display: none;
+}
+
+b {
+    position: fixed;
+    font-size: 2vh;
+    font-family: monospace;
+    color: #f1f1f1;
+    background-image: linear-gradient(to left, rgba(0, 255, 55), rgb(55, 0, 255), rgb(255, 0, 55));
+    padding: 10px;
+}
+
+a {
+    text-decoration: underline;
+    color: #f1f1f1;
+}
+
+@media (min-width: 1001px) {
+    b {
+        left: 10px;
+        bottom: 10px;
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        background-image: url("bandieraMobile.jpg");
+        margin: 0;
+        padding: 0;
+    }
+
+    .container>.colonna {
+        width: 100%;
+        /*Larghezza scheda*/
+    }
+
+    .colonna>section {
+        background-color: #00000000;
+    }
+
+    img,
+    iframe {
+        width: 95%;
+        height: 200px;
+    }
+
+    p {
+        font-size: 2rem;
+        text-align: start;
+        overflow-y: scroll;
+        background-color: #f1f1f1ad;
+        height: 180px;
+        padding: 20px;
+    }
+
+    summary {
+        font-size: 2rem;
+    }
+
+    select {
+        display: block;
+        position: fixed;
+        padding: 10px;
+        z-index: 1;
+        right: 0px;
+        bottom: 0px;
+        max-width: auto;
+    }
+
+    .container {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+    }
+
+    .colonna>section {
+        height: 100vh;
+        line-height: normal;
+        margin-bottom: 0px;
+        scroll-snap-align: start;
+    }
+
+    b {
+        left: 10px;
+        bottom: 10px;
+        max-width: 40%;
+    }
+}
+
+@media (max-height: 500px) {
+    body {
+        background-image: url("bandiera.jpg");
+    }
+
+    .container>.colonna {
+        width: 90%;
+        /*Larghezza scheda*/
+    }
+
+    img,
+    iframe {
+        width: auto;
+        height: 100px;
+    }
+
+    details>p {
+        padding: 5%;
+        height: 15vh;
+    }
+
+    p {
+        font-size: 1.6rem;
+        background-color: #f1f1f1ad;
+        height: 180px;
+        padding: 20px;
+    }
+
+    summary {
+        font-size: 1.6rem;
+    }
+}
+  
